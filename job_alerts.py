@@ -3,11 +3,12 @@ from bs4 import BeautifulSoup
 import smtplib
 from email.mime.text import MIMEText
 from datetime import datetime
+from dotenv import load_dotenv
 import os
 
-
-EMAIL = os.environ['saurabhwaghamare@gmail.com']
-APP_PASSWORD = os.environ['pass']
+load_dotenv()
+EMAIL = os.environ['ADMIN_EMAIL']
+APP_PASSWORD = os.environ['ADMIN_PASSWORD']
 
 HEADERS = {"User-Agent" : "Mozilla/5.0"}
 
@@ -21,11 +22,11 @@ SEARCH_URLS = {
     "Glassdoor Japan": "https://www.glassdoor.co.jp/Job/japan-{}-jobs-SRCH_IL.0,5_IN123.htm"
 }
 
-ROLE = {
+ROLE = [
     "AI Engineer 新卒",
     "Python Full Stack Developer 未経験",
     "Unity Game Developer Junior"
-}
+]
 
 def fetch_jobs():
     jobs = set ()
@@ -38,11 +39,12 @@ def fetch_jobs():
             try:
                 search_url = url.format(query)
                 r = requests.get(search_url, headers=HEADERS, timeout=10)
+                r.raise_for_status()
                 soup = BeautifulSoup(r.text, "html.parser")
 
                 for a in soup.find_all("a",href = True):
                     link = a['href']
-                    if "job" in link.lower():
+                    if any(word in link.lower() for word in ["job", "career", "recruit"]):
                         if link.startswith("/"):
                             base = search_url.split("/")[0] + "/" + search_url.split("/")[2]
                             link = base + link
@@ -63,8 +65,8 @@ def send_email(links):
             body += link+ "\n\n"
     
     msg = MIMEText(body)
-    msg["Subject"] = f"job Alerts" - {datetime.now().strftime('%d %b %Y')}
-    msg['Form'] = EMAIL
+    msg["Subject"] = f"Job Alerts - {datetime.now().strftime('%d %b %Y')}"
+    msg['From'] = EMAIL
     msg["To"] = EMAIL
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
