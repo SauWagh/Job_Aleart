@@ -6,9 +6,13 @@ from datetime import datetime
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
 EMAIL = os.environ['ADMIN_EMAIL']
 APP_PASSWORD = os.environ['ADMIN_PASSWORD']
+
+
+if not EMAIL or not APP_PASSWORD:
+    raise ValueError("ADMIN_EMAIL or ADMIN_PASSWORD not set. Check GitHub Secrets.")
+
 
 HEADERS = {"User-Agent" : "Mozilla/5.0"}
 
