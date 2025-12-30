@@ -31,4 +31,4 @@ jobs:
         env:
           ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-        run: python Job_Aleart/job_alerts.py
+        run: python job_alerts.py
