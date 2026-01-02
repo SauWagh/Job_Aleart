@@ -31,6 +31,12 @@
   4. smtplib – Email sending
   5. GitHub Actions – Automation
   6. Cron Jobs – Scheduling
+  7. 
+<hr>
+
+## Bot Runs automatically every day at 11:00 AM
+    11:00 AM IST (05:30 UTC)
+    
 <hr>
 
 ## Add email and password in Environment Variables
