@@ -24,7 +24,14 @@ SEARCH_URLS = {
     "Daijob": "https://www.daijob.com/en/jobs/search?kw={}",
     "Wantedly": "https://www.wantedly.com/projects?keyword={}",
     "Indeed Japan": "https://jp.indeed.com/jobs?q={}&l=Japan",
-    "Glassdoor Japan": "https://www.glassdoor.co.jp/Job/japan-{}-jobs-SRCH_IL.0,5_IN123.htm"
+    "Glassdoor Japan": "https://www.glassdoor.co.jp/Job/japan-{}-jobs-SRCH_IL.0,5_IN123.htm",
+    "GaijinPot": "https://jobs.gaijinpot.com/job/index/lang/en?keywords={}",
+    "Indeed Japan": "https://jp.indeed.com/jobs?q={}&l=Japan",
+    "Indeed India": "https://in.indeed.com/jobs?q={}&l=India",
+    "Naukri": "https://www.naukri.com/{}-jobs",
+    "Foundit": "https://www.foundit.in/search/{}",
+    "Freshersworld": "https://www.freshersworld.com/jobs/jobsearch/{}"
+
 }
 
 # Some KEy Role 
