@@ -88,7 +88,7 @@ def fetch_jobs():
 
 #create email body and add title
 def send_email(links):
-    body = "🇯🇵 JOB ALERTS (FRESHERS)\n\n"
+    body = "JOB ALERTS (FRESHERS)\n\n"
     
     #if job is not found still its send mail anyway
     if not links:
