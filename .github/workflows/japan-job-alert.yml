@@ -1,26 +1,37 @@
+#Identification
 name: Job Alert
 
+# job alert
 on:
   schedule:
     - cron: '30 5 * * *'   # 11:00 AM IST
+
+  # allow go to Action and Run
   workflow_dispatch:
 
+#Define a job named run-script
 jobs:
   run-script:
+
+    #Github Create a temporary ubuntu Linux machine
     runs-on: ubuntu-latest
 
     steps:
+        #Download your repository into the runner
       - name: Checkout repo
         uses: actions/checkout@v4
 
+        #install python, add path, all python cmd to work
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
+      # install Dependencies
       - name: Install dependencies
         run: pip install requests beautifulsoup4 python-dotenv
 
+      #Run Script
       - name: Run job alert script
         env:
           ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
