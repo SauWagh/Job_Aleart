@@ -17,8 +17,7 @@ if not EMAIL or not APP_PASSWORD:
 HEADERS = {"User-Agent" : "Mozilla/5.0"}
 
 # Some urls for searching Jobs
-SEARCH_URLS = {  
-SEARCH_URLS = {
+SEARCH_URLS = { 
 
     # ===== INDIA JOB PORTALS =====
     "Indeed India": "https://in.indeed.com/jobs?q={}&l=India",
@@ -64,9 +63,6 @@ SEARCH_URLS = {
     "Idealist": "https://www.idealist.org/en/search?search={}",
     "Devex": "https://www.devex.com/jobs/search?keyword={}",
     "EU Jobs (EURES)": "https://europa.eu/eures/portal/home?keyword={}"
-}
-
-
 }
 
 # Some KEy Role 
