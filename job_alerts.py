@@ -18,6 +18,23 @@ HEADERS = {"User-Agent" : "Mozilla/5.0"}
 
 # Some urls for searching Jobs
 SEARCH_URLS = {  
+SEARCH_URLS = {
+
+    # ===== INDIA JOB PORTALS =====
+    "Indeed India": "https://in.indeed.com/jobs?q={}&l=India",
+    "Naukri": "https://www.naukri.com/{}-jobs",
+    "Foundit (Monster)": "https://www.foundit.in/search/{}",
+    "Shine": "https://www.shine.com/jobs/search?keyword={}",
+    "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?txtKeywords={}",
+    "Freshersworld": "https://www.freshersworld.com/jobs/jobsearch/{}",
+    "FreshersLive": "https://www.fresherslive.com/jobs/{}",
+    "PlacementIndia": "https://placementindia.com/jobs/search?q={}",
+    "Apna App": "https://apna.co/jobs?search={}",
+    "WorkIndia": "https://www.workindia.in/jobs/?query={}",
+    "QuikrJobs": "https://www.quikr.com/jobs/{}",
+    "Indeed Global": "https://www.indeed.com/jobs?q={}",
+
+    # ===== JAPAN JOB PORTALS =====
     "GaijinPot": "https://jobs.gaijinpot.com/job/index/lang/en?keywords={}",
     "JobsInJapan": "https://jobsinjapan.com/jobs/?search_keywords={}",
     "CareerCross": "https://www.careercross.com/en/job-search/result?keyword={}",
@@ -25,12 +42,30 @@ SEARCH_URLS = {
     "Wantedly": "https://www.wantedly.com/projects?keyword={}",
     "Indeed Japan": "https://jp.indeed.com/jobs?q={}&l=Japan",
     "Glassdoor Japan": "https://www.glassdoor.co.jp/Job/japan-{}-jobs-SRCH_IL.0,5_IN123.htm",
-    "GaijinPot": "https://jobs.gaijinpot.com/job/index/lang/en?keywords={}",
-    "Indeed Japan": "https://jp.indeed.com/jobs?q={}&l=Japan",
-    "Indeed India": "https://in.indeed.com/jobs?q={}&l=India",
-    "Naukri": "https://www.naukri.com/{}-jobs",
-    "Foundit": "https://www.foundit.in/search/{}",
-    "Freshersworld": "https://www.freshersworld.com/jobs/jobsearch/{}"
+
+    # ===== GLOBAL JOB PORTALS =====
+    "LinkedIn Jobs": "https://www.linkedin.com/jobs/search/?keywords={}",
+    "Jooble": "https://jooble.org/SearchResult?rgns=&ukw={}",
+    "Adzuna": "https://www.adzuna.com/search?q={}",
+    "SimplyHired": "https://www.simplyhired.com/search?q={}",
+    "WhatJobs": "https://www.whatjobs.com/Search/{}",
+    "Glassdoor Global": "https://www.glassdoor.com/Job/jobs.htm?sc.keyword={}",
+
+    # ===== REMOTE / TECH JOBS =====
+    "RemoteOK": "https://remoteok.com/remote-{}-jobs",
+    "WeWorkRemotely": "https://weworkremotely.com/remote-jobs/search?term={}",
+    "Remotive": "https://remotive.com/jobs?search={}",
+    "FlexJobs": "https://www.flexjobs.com/search?search={}",
+    "AngelList (Wellfound)": "https://wellfound.com/jobs?query={}",
+    "GitHub Jobs": "https://jobs.github.com/positions?description={}",
+    "StackOverflow Jobs": "https://stackoverflow.com/jobs?r=true&q={}",
+
+    # ===== SPECIAL / NICHE =====
+    "Idealist": "https://www.idealist.org/en/search?search={}",
+    "Devex": "https://www.devex.com/jobs/search?keyword={}",
+    "EU Jobs (EURES)": "https://europa.eu/eures/portal/home?keyword={}"
+}
+
 
 }
 
